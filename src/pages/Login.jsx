@@ -16,7 +16,7 @@ function Login() {
       formData.append("email", email);
       formData.append("password", password);
 
-      const res = await API.post("login.php", formData);
+      const res = await API.post("/login.php", formData);
       if (res.data.status === "success") {
         //save user data to localStorage
         localStorage.setItem("user", JSON.stringify(res.data.user));
